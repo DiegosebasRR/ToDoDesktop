@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../public/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("../public/fonts/OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../public/fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+:root {
+  --background-primary: #f7ecde;
+  --background-secondary: #54bab9;
+}
+[data-theme="moon"] {
+  --background-primary: #1c273b;
+  --background-secondary: #354259;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "OpenSans";
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.header {
+  height: 200px;
+}
+.title {
+  color: #e9c597;
+  font-family: "OpenSans-ExtraBold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.theme {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.content {
+  width: 60%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.left-panel {
+  margin: 10px;
+  width: 30%;
+  background-color: var(--background-secondary);
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.right-panel {
+  width: 70%;
+  margin: 10px;
+}
+
+.top-panel {
+  height: 13%;
+  width: 100%;
+  background-color: var(--background-secondary);
+  border-radius: 20px;
+  margin-bottom: 1.5%;
+  transition: all 0.5s ease-in-out;
+}
+.botton-panel {
+  height: 85%;
+  width: 100%;
+  background-color: var(--background-secondary);
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.button-category {
+  width: 80%;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+.subtitle span {
+  background: var(--background-secondary);
+  z-index: 100;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.subtitle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0px;
+  top: 50%;
+  background: white;
+  z-index: 50;
+}
+
+.categories {
+  height: 70%;
+  width: 100%;
+  max-height: 600px;
+  overflow: auto;
+}
+
+.categories::-webkit-scrollbar {
+  width: 10px;
+}
+
+.add-category {
+  margin-top: 10px;
+}
+
+.add-task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 25px 0 25px;
+}
+
+.task-text {
+  width: 200px;
+}
+
+.task-text > h2 {
+  color: #1d8a8a;
+  font-family: OpenSans-Bold;
+}
+
+.add-task-bt {
+  width: 300px;
+}
+.add-task-bt > .button-category {
+  font-family: OpenSans-ExtraBold;
+}
+
+.task-container {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px 0 20px;
+}
+
+.line {
+  border: none;
+  border-top: 1px solid white;
+}
+
+.container-check {
+  background-color: green;
+  height: 34px;
+  width: 34px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check {
+  height: 20px;
+  width: 20px;
+}
+
+.textTask {
+  font-size: 20px;
+  color: white;
+}
+
+.btnTask {
+  width: 200px;
+}
+
+.tasks-container {
+  height: 90%;
+  width: 100%;
+
+  overflow: auto;
+}
+
+.tasks-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.text-span {
+  text-align: center;
+  color: #1d8a8a;
+}
+
+.text-span h2 {
+  font-family: OpenSans-ExtraBold;
+}
+
+.text-span span {
+  font-family: OpenSans-ExtraBold;
+  margin: 0 10px 0 10px;
+  color: white;
+}
